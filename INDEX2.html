@@ -90,6 +90,7 @@
       padding-bottom: 0.6rem;
     }
 
+    /* ----- Clickable contact items ----- */
     .contact-item {
       display: flex;
       align-items: center;
@@ -103,9 +104,9 @@
       width: 20px;
       color: #d4af7d;
       font-size: 1rem;
+      flex-shrink: 0;
     }
 
-    /* Make LinkedIn clickable */
     .contact-item a {
       color: #ddd0d0;
       text-decoration: none;
@@ -124,6 +125,14 @@
       width: 20px;
       color: #d4af7d;
       font-size: 1rem;
+    }
+
+    /* Non-link contact items (location) */
+    .contact-item .no-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
     }
 
     .section-title {
@@ -585,17 +594,34 @@
         <div class="avatar-icon">
           <i class="fas fa-female"></i>
         </div>
-        <h1>Sarah <br>Mitchell</h1>
+        <h1>Gee <br>Pgdn</h1>
         <div class="title">Client Services & Operations Leader</div>
-        <div class="contact-item"><i class="fas fa-envelope"></i> sarah.m@career.io</div>
-        <div class="contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 555‑0199</div>
-        <!-- LinkedIn with clickable link -->
+
+        <!-- Email – click to open draft -->
+        <div class="contact-item">
+          <a href="mailto:sarah.m@career.io" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i> sarah.m@career.io
+          </a>
+        </div>
+
+        <!-- Phone – click to dial -->
+        <div class="contact-item">
+          <a href="tel:+18005550199" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone-alt"></i> +1 (800) 555‑0199
+          </a>
+        </div>
+
+        <!-- LinkedIn – click to open profile -->
         <div class="contact-item">
           <a href="https://linkedin.com/in/sarahm" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i> linkedin.com/in/sarahm
           </a>
         </div>
-        <div class="contact-item"><i class="fas fa-map-pin"></i> Los Angeles, CA</div>
+
+        <!-- Location – not clickable -->
+        <div class="contact-item">
+          <span class="no-link"><i class="fas fa-map-pin"></i> Los Angeles, CA</span>
+        </div>
       </div>
 
       <div>
